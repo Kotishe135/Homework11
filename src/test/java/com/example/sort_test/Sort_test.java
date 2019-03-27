@@ -118,31 +118,31 @@ public class Sort_test {
     public void testSortLong() {
         try {
             Main.cocktailSort(VERY_LONG_ARRAY);
-        } catch (Exception e) {
+        } catch (StackOverflowError e) {
             MatcherAssert.assertThat("Ошибка\nСортировка: cocktail\n Массив из большого кол-ва элементов",
                     false);
         }
         try {
             Main.quickSort(VERY_LONG_ARRAY);
-        } catch (Exception e) {
+        } catch (StackOverflowError e) {
             MatcherAssert.assertThat("Ошибка\nСортировка: quick\n Массив из большого кол-ва элементов",
                     false);
         }
         try {
             Main.combSort(VERY_LONG_ARRAY);
-        } catch (Exception e) {
+        } catch (StackOverflowError e) {
             MatcherAssert.assertThat("Ошибка\nСортировка: comb\n Массив из большого кол-ва элементов",
                     false);
         }
         try {
             Main.gnomeSort(VERY_LONG_ARRAY);
-        } catch (Exception e) {
+        } catch (StackOverflowError e) {
             MatcherAssert.assertThat("Ошибка\nСортировка: gnome\n Массив из большого кол-ва элементов",
                     false);
         }
         try {
             Main.selectionSort(VERY_LONG_ARRAY);
-        } catch (Exception e) {
+        } catch (StackOverflowError e) {
             MatcherAssert.assertThat("Ошибка\nСортировка: selection\n Массив из большого кол-ва элементов",
                     false);
         }
